@@ -5,11 +5,13 @@ Main view for the String Reverser application.
 This module contains functions responsible for handling user interactions,
 such as displaying welcome messages and managing the application loop.
 """
+
 from reverser import reverse_string
 from utils.messages import yellow, reversed_str, warning_path, sound_error, btn_click_path, reset, blue, \
-    welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message
+    welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message, exit_path, \
+    exit_sleep_time, purple, teal
 from utils.sound_controller import play_sound
-from utils.utils import color_picker
+from utils.utils import color_picker, wait
 
 
 def app_runner():
@@ -25,19 +27,22 @@ def app_runner():
     from the color_picker function.
     """
     while True:
-        input_string = input(input_str)  # Use the imported message
+        input_string = input(color_picker(teal) + input_str + color_picker(reset))  # Use the imported message
         if input_string.lower() == exit_input:
-            print(exit_message)
+            play_sound(exit_path)
+            print(color_picker(purple) + exit_message + color_picker(reset))
+            wait(exit_sleep_time)
             break
 
         try:
-            play_sound(btn_click_path)  # Play sound
+            play_sound(btn_click_path)
         except Exception as e:
             print(sound_error.format(e))
             play_sound(warning_path, is_warning=True)
 
         reversed_string = reverse_string(input_string)
-        print(reversed_str, color_picker(yellow) + reversed_string + color_picker(reset))
+        print(color_picker(teal) + reversed_str + color_picker(reset),
+              color_picker(yellow) + reversed_string + color_picker(reset))
         print()
 
 

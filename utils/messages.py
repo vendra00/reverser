@@ -22,6 +22,7 @@ sound_not_found = "Warning: Sound file not found at {}"
 # Sound files
 btn_click_path = "files/btn_click.wav"
 warning_path = "files/warning.wav"
+exit_path = "files/exit.wav"
 
 # Colors
 red = "red"
@@ -29,6 +30,7 @@ green = "green"
 yellow = "yellow"
 blue = "blue"
 purple = "purple"
+teal = "teal"
 reset = "reset"
 
 # Color codes
@@ -37,4 +39,8 @@ green_code = "\033[92m"
 yellow_code = "\033[93m"
 blue_code = "\033[94m"
 purple_code = "\033[95m"
+teal_code = "\033[96m"
 reset_code = "\033[0m"
+
+# Sleep times
+exit_sleep_time = 1.7
