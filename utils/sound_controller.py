@@ -16,6 +16,8 @@ from utils.utils import color_picker
 
 # Initialize Pygame mixer
 pygame.mixer.init()
+background_sound_thread = None
+background_sound_playing = False
 
 
 def _play_sound_thread(sound_path):
@@ -43,3 +45,34 @@ def play_sound(sound_path, is_warning=False):
             print(color_picker(red) + sound_not_found.format(sound_path) + color_picker(reset))
             # Now call play_sound for warning with is_warning set to True
             play_sound(warning_path, is_warning=True)
+
+
+def _background_sound_loop(sound_path):
+    global background_sound_playing
+    pygame.mixer.music.load(sound_path)
+    pygame.mixer.music.play(-1)  # Play the music indefinitely
+    while background_sound_playing:
+        pass
+    pygame.mixer.music.stop()
+
+
+def start_background_sound(sound_path):
+    global background_sound_thread, background_sound_playing
+    background_sound_playing = True
+    if not pygame.mixer.music.get_busy():
+        background_sound_thread = threading.Thread(target=_background_sound_loop, args=(sound_path,))
+        background_sound_thread.start()
+
+
+def stop_background_sound():
+    global background_sound_playing
+    background_sound_playing = False
+    pygame.mixer.music.stop()
+
+
+def toggle_background_sound(sound_path):
+    global background_sound_playing
+    if background_sound_playing:
+        stop_background_sound()
+    else:
+        start_background_sound(sound_path)

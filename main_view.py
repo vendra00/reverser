@@ -7,10 +7,10 @@ such as displaying welcome messages and managing the application loop.
 """
 
 from reverser import reverse_string
-from utils.messages import yellow, reversed_str, warning_path, sound_error, btn_click_path, reset, blue, \
+from utils.messages import yellow, reversed_str, sound_error, btn_click_path, reset, blue, \
     welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message, exit_path, \
-    exit_sleep_time, purple, teal
-from utils.sound_controller import play_sound
+    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option
+from utils.sound_controller import play_sound, toggle_background_sound, start_background_sound, stop_background_sound
 from utils.utils import color_picker, wait
 
 
@@ -26,19 +26,25 @@ def app_runner():
     The colors for the output text are set using ANSI escape codes obtained
     from the color_picker function.
     """
+    # Start playing background sound
+    start_background_sound(background_path)  # Ensure this is the correct path
     while True:
         input_string = input(color_picker(teal) + input_str + color_picker(reset))  # Use the imported message
         if input_string.lower() == exit_input:
             play_sound(exit_path)
             print(color_picker(purple) + exit_message + color_picker(reset))
+            stop_background_sound()
             wait(exit_sleep_time)
             break
+        if input_string.lower() == mute_input:
+            toggle_background_sound(background_path)  # Add your background music path
+            continue
 
         try:
             play_sound(btn_click_path)
         except Exception as e:
             print(sound_error.format(e))
-            play_sound(warning_path, is_warning=True)
+            play_sound(error_path)
 
         reversed_string = reverse_string(input_string)
         print(color_picker(teal) + reversed_str + color_picker(reset),
@@ -54,6 +60,11 @@ def welcome_interface():
     It utilizes ANSI escape codes for coloring the text, which are obtained
     from the color_picker function.
     """
+    print()
+    print(color_picker(green) + bar + color_picker(reset))
     print(color_picker(blue) + welcome_message + color_picker(reset))
     print(color_picker(blue) + instruction_message + color_picker(reset))
+    print(color_picker(blue) + sound_option + color_picker(reset))
     print(color_picker(blue) + exit_instruction + color_picker(reset))
+    print(color_picker(green) + bar + color_picker(reset))
+    print()

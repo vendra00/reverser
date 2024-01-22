@@ -10,19 +10,22 @@ input_str = "Enter a string: "
 exit_message = "Exiting the program. Goodbye!"
 welcome_message = "Welcome to the String Reverser!"
 instruction_message = "Enter a string and I will reverse it for you."
-exit_instruction = "Type 'exit' to end the program.\n"
-exit_input = "exit"
+exit_instruction = "Type 'x' to end the program."
+sound_option = "Type 'm' to mute/unmute the background music."
+exit_input = "x"
+mute_input = "m"
 reversed_str = "Reversed string:"
 
 # Error messages
 sound_error = "Error playing sound: {}"
 sound_not_found = "Warning: Sound file not found at {}"
 
-
 # Sound files
 btn_click_path = "files/btn_click.wav"
 warning_path = "files/warning.wav"
+error_path = "files/error.wav"
 exit_path = "files/exit.wav"
+background_path = "files/background.mp3"
 
 # Colors
 red = "red"
@@ -44,3 +47,6 @@ reset_code = "\033[0m"
 
 # Sleep times
 exit_sleep_time = 1.7
+
+# UI
+bar = "================================================"
