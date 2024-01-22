@@ -112,3 +112,21 @@ def reverser_animation_ui(animation_str, s):
     sys.stdout.write('\r' + ' ' * padding + centered_str)  # Center the string
     sys.stdout.flush()
     wait(animation_sleep_time)
+
+
+def is_palindrome(s):
+    """
+    Check if a given string is a palindrome.
+
+    This function compares the string to its reverse and determines if it is a palindrome.
+    It ignores spaces, punctuation, and capitalization.
+
+    Parameters:
+    s (str): The string to be checked.
+
+    Returns:
+    bool: True if the string is a palindrome, False otherwise.
+    """
+    # Remove spaces and convert to lowercase
+    clean_str = ''.join(char.lower() for char in s if char.isalnum())
+    return clean_str == clean_str[::-1]

@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="851c271b-5fc1-4ebc-b8a1-b9e108efc01e" name="Changes" comment="added animation and refactor the reverser.py&#10;&#10;added complete sound&#10;&#10;some other refactors" />
+    <list default="true" id="851c271b-5fc1-4ebc-b8a1-b9e108efc01e" name="Changes" comment="unused imports">
+      <change afterPath="$PROJECT_DIR$/files/palindrome.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reverser.py" beforeDir="false" afterPath="$PROJECT_DIR$/reverser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/messages.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,24 +63,18 @@
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
   <component name="QodanaCloudProjectLink">
-    <option name="lastReportId" value="4qd2W" />
+    <option name="lastReportId" value="v4gN8" />
     <option name="linkedProjectId" value="AYbgm" />
     <option name="linkedProjectName" value="reverser" />
     <option name="organizationId" value="zqBwx" />
     <option name="userId" value="A68QN" />
   </component>
   <component name="QodanaHighlightedReportService">
-    <option name="localRunPublishedPersistedInfo">
-      <LocalRunPublishedPersistedInfo>
-        <option name="fileReportPersistedInfo">
-          <LocalReportPersistedInfo>
-            <option name="path" value="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output4\qodana.sarif.json" />
-            <option name="reportGuid" value="24e1a102-c6e4-413d-ba80-92f20c259294" />
-            <option name="reportName" value="reverser/qodana/2024-01-22" />
-          </LocalReportPersistedInfo>
-        </option>
-        <option name="reportLink" value="https://qodana.cloud/projects/AYbgm/reports/2lqMd" />
-      </LocalRunPublishedPersistedInfo>
+    <option name="cloudReportPersistedInfo">
+      <CloudReportPersistedInfo>
+        <option name="projectId" value="AYbgm" />
+        <option name="reportId" value="v4gN8" />
+      </CloudReportPersistedInfo>
     </option>
   </component>
   <component name="QodanaIsSelectedPersistenceService">
@@ -82,8 +82,7 @@
   </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output4\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/2lqMd" reportGuid="24e1a102-c6e4-413d-ba80-92f20c259294" reportId="reverser/qodana/2024-01-22" />
-      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output11\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/4qd2W" reportGuid="05b4625b-b29e-420f-a1da-651e6eafb7f1" reportId="reverser/qodana/2024-01-22" />
+      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output10\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/v4gN8" reportGuid="2a40513e-f41b-4127-90e3-269036948d07" reportId="reverser/qodana/2024-01-22" />
     </option>
   </component>
   <component name="QodanaSettings">
@@ -140,7 +139,7 @@
       <workItem from="1705910427886" duration="41000" />
       <workItem from="1705910494174" duration="302000" />
       <workItem from="1705910813350" duration="760000" />
-      <workItem from="1705911591008" duration="16566000" />
+      <workItem from="1705911591008" duration="17381000" />
     </task>
     <task id="LOCAL-00001" summary="refactor">
       <option name="closed" value="true" />
@@ -190,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705933232455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="unused imports">
+      <option name="closed" value="true" />
+      <created>1705933323654</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705933323654</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,10 +209,11 @@
     <MESSAGE value="added exit sound, wait method and teal color. Also, some refactors" />
     <MESSAGE value="added background music" />
     <MESSAGE value="added animation and refactor the reverser.py&#10;&#10;added complete sound&#10;&#10;some other refactors" />
-    <option name="LAST_COMMIT_MESSAGE" value="added animation and refactor the reverser.py&#10;&#10;added complete sound&#10;&#10;some other refactors" />
+    <MESSAGE value="unused imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="unused imports" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/StringReverser$main.coverage" NAME="main Coverage Results" MODIFIED="1705868787917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/reverser$main.coverage" NAME="main Coverage Results" MODIFIED="1705933133222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reverser$main.coverage" NAME="main Coverage Results" MODIFIED="1705934037389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

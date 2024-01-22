@@ -17,6 +17,7 @@ mute_input = "m"
 reversed_str = "Reversed string:"
 reversing_str = "\n......REVERSING......"
 reversing_str_complete = "...REVERSING COMPLETE...\n"
+palindrome_str = "This is a palindrome!"
 
 # Error messages
 sound_error = "Error playing sound: {}"
@@ -28,6 +29,7 @@ warning_path = "files/warning.wav"
 error_path = "files/error.wav"
 exit_path = "files/exit.wav"
 complete_path = "files/complete.wav"
+palindrome_path = "files/palindrome.wav"
 background_path = "files/background.mp3"
 
 # Colors
@@ -55,6 +57,7 @@ total_width = 15
 # Sleep times
 exit_sleep_time = 1.7
 animation_sleep_time = 0.5
+palindrome_sleep_time = 0.8
 
 # UI
 bar = "================================================"

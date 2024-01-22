@@ -6,10 +6,13 @@ This module contains functions responsible for handling user interactions,
 such as displaying welcome messages and managing the application loop.
 """
 
-from reverser import reverse_string
-from utils.messages import yellow, reversed_str, sound_error, btn_click_path, reset, blue, \
-    welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message, exit_path, \
-    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option
+from reverser import reverse_string, is_palindrome
+from utils.messages import (yellow, reversed_str, sound_error, btn_click_path, reset, blue, welcome_message,
+                            instruction_message, exit_instruction, input_str, exit_input, exit_message,
+                            exit_path,
+                            exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input,
+                            sound_option, palindrome_str,
+                            palindrome_path, palindrome_sleep_time)
 from utils.sound_controller import play_sound, toggle_background_sound, start_background_sound, stop_background_sound
 from utils.utils import color_picker, wait
 
@@ -36,6 +39,11 @@ def app_runner():
         if input_string.lower() == mute_input:
             mute_background()
             continue
+        if input_string.lower() not in [mute_input, exit_input]:
+            if is_palindrome(input_string):
+                print(color_picker(green) + palindrome_str + color_picker(reset))
+                play_sound(palindrome_path)
+                wait(palindrome_sleep_time)
 
         try:
             play_sound(btn_click_path)
