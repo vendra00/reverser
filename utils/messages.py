@@ -15,6 +15,8 @@ sound_option = "Type 'm' to mute/unmute the background music."
 exit_input = "x"
 mute_input = "m"
 reversed_str = "Reversed string:"
+reversing_str = "\n......REVERSING......"
+reversing_str_complete = "...REVERSING COMPLETE...\n"
 
 # Error messages
 sound_error = "Error playing sound: {}"
@@ -25,6 +27,7 @@ btn_click_path = "files/btn_click.wav"
 warning_path = "files/warning.wav"
 error_path = "files/error.wav"
 exit_path = "files/exit.wav"
+complete_path = "files/complete.wav"
 background_path = "files/background.mp3"
 
 # Colors
@@ -45,8 +48,13 @@ purple_code = "\033[95m"
 teal_code = "\033[96m"
 reset_code = "\033[0m"
 
+# Padding
+padding = " "
+total_width = 15
+
 # Sleep times
 exit_sleep_time = 1.7
+animation_sleep_time = 0.5
 
 # UI
 bar = "================================================"

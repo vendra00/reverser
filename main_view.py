@@ -9,7 +9,8 @@ such as displaying welcome messages and managing the application loop.
 from reverser import reverse_string
 from utils.messages import yellow, reversed_str, sound_error, btn_click_path, reset, blue, \
     welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message, exit_path, \
-    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option
+    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option, \
+    reversing_str_complete, reversing_str
 from utils.sound_controller import play_sound, toggle_background_sound, start_background_sound, stop_background_sound
 from utils.utils import color_picker, wait
 
@@ -31,13 +32,10 @@ def app_runner():
     while True:
         input_string = input(color_picker(teal) + input_str + color_picker(reset))  # Use the imported message
         if input_string.lower() == exit_input:
-            play_sound(exit_path)
-            print(color_picker(purple) + exit_message + color_picker(reset))
-            stop_background_sound()
-            wait(exit_sleep_time)
+            exit_app()
             break
         if input_string.lower() == mute_input:
-            toggle_background_sound(background_path)  # Add your background music path
+            mute_background()
             continue
 
         try:
@@ -45,11 +43,21 @@ def app_runner():
         except Exception as e:
             print(sound_error.format(e))
             play_sound(error_path)
-
         reversed_string = reverse_string(input_string)
         print(color_picker(teal) + reversed_str + color_picker(reset),
               color_picker(yellow) + reversed_string + color_picker(reset))
         print()
+
+
+def mute_background():
+    toggle_background_sound(background_path)  # Add your background music path
+
+
+def exit_app():
+    play_sound(exit_path)
+    print(color_picker(purple) + exit_message + color_picker(reset))
+    stop_background_sound()
+    wait(exit_sleep_time)
 
 
 def welcome_interface():
