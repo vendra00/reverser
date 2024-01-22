@@ -38,4 +38,3 @@ yellow_code = "\033[93m"
 blue_code = "\033[94m"
 purple_code = "\033[95m"
 reset_code = "\033[0m"
-

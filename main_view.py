@@ -6,7 +6,8 @@ This module contains functions responsible for handling user interactions,
 such as displaying welcome messages and managing the application loop.
 """
 from reverser import reverse_string
-from utils import messages
+from utils.messages import yellow, reversed_str, warning_path, sound_error, btn_click_path, reset, blue, \
+    welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message
 from utils.sound_controller import play_sound
 from utils.utils import color_picker
 
@@ -24,19 +25,19 @@ def app_runner():
     from the color_picker function.
     """
     while True:
-        input_string = input(messages.input_str)  # Use the imported message
-        if input_string.lower() == messages.exit_input:
-            print(messages.exit_message)
+        input_string = input(input_str)  # Use the imported message
+        if input_string.lower() == exit_input:
+            print(exit_message)
             break
 
         try:
-            play_sound(messages.btn_click_path)  # Play sound
+            play_sound(btn_click_path)  # Play sound
         except Exception as e:
-            print(messages.sound_error.format(e))
-            play_sound(messages.warning_path, is_warning=True)
+            print(sound_error.format(e))
+            play_sound(warning_path, is_warning=True)
 
         reversed_string = reverse_string(input_string)
-        print(messages.reversed_str, color_picker(messages.yellow) + reversed_string + color_picker(messages.reset))
+        print(reversed_str, color_picker(yellow) + reversed_string + color_picker(reset))
         print()
 
 
@@ -48,6 +49,6 @@ def welcome_interface():
     It utilizes ANSI escape codes for coloring the text, which are obtained
     from the color_picker function.
     """
-    print(color_picker(messages.blue) + messages.welcome_message + color_picker(messages.reset))
-    print(color_picker(messages.blue) + messages.instruction_message + color_picker(messages.reset))
-    print(color_picker(messages.blue) + messages.exit_instruction + color_picker(messages.reset))
+    print(color_picker(blue) + welcome_message + color_picker(reset))
+    print(color_picker(blue) + instruction_message + color_picker(reset))
+    print(color_picker(blue) + exit_instruction + color_picker(reset))

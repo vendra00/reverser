@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="851c271b-5fc1-4ebc-b8a1-b9e108efc01e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/StringReverser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StringReverser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/messages.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/messages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/sound_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/sound_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="851c271b-5fc1-4ebc-b8a1-b9e108efc01e" name="Changes" comment="refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,18 +54,24 @@
     <option name="path" value="$PROJECT_DIR$/.github/workflows/qodana_code_quality.yml" />
   </component>
   <component name="QodanaCloudProjectLink">
-    <option name="lastReportId" value="gJ9YK" />
+    <option name="lastReportId" value="LvQar" />
     <option name="linkedProjectId" value="AYbgm" />
     <option name="linkedProjectName" value="reverser" />
     <option name="organizationId" value="zqBwx" />
     <option name="userId" value="A68QN" />
   </component>
   <component name="QodanaHighlightedReportService">
-    <option name="cloudReportPersistedInfo">
-      <CloudReportPersistedInfo>
-        <option name="projectId" value="AYbgm" />
-        <option name="reportId" value="gJ9YK" />
-      </CloudReportPersistedInfo>
+    <option name="localRunPublishedPersistedInfo">
+      <LocalRunPublishedPersistedInfo>
+        <option name="fileReportPersistedInfo">
+          <LocalReportPersistedInfo>
+            <option name="path" value="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output3\qodana.sarif.json" />
+            <option name="reportGuid" value="aafa0f5e-f514-4724-ac58-28f5a648b276" />
+            <option name="reportName" value="reverser/qodana/2024-01-22" />
+          </LocalReportPersistedInfo>
+        </option>
+        <option name="reportLink" value="https://qodana.cloud/projects/AYbgm/reports/LvQar" />
+      </LocalRunPublishedPersistedInfo>
     </option>
   </component>
   <component name="QodanaIsSelectedPersistenceService">
@@ -84,6 +80,9 @@
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/gJ9YK" reportGuid="91c2f382-b6f2-4e0e-bc92-0f2efe701e9d" reportId="reverser/qodana/2024-01-22" />
+      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output1\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/gJ9nK" reportGuid="59a6c644-1af8-4688-b56b-c5962be0b4cd" reportId="reverser/qodana/2024-01-22" />
+      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output2\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/1VkLm" reportGuid="216c051e-860e-42bb-8bbc-23258cf4877b" reportId="reverser/qodana/2024-01-22" />
+      <ReportDescription localRun="true" path="C:\Users\g.vendramini\AppData\Local\Temp\qodana_output3\qodana.sarif.json" publishedReportLink="https://qodana.cloud/projects/AYbgm/reports/LvQar" reportGuid="aafa0f5e-f514-4724-ac58-28f5a648b276" reportId="reverser/qodana/2024-01-22" />
     </option>
   </component>
   <component name="QodanaSettings">
@@ -139,12 +138,25 @@
       <workItem from="1705910427886" duration="41000" />
       <workItem from="1705910494174" duration="302000" />
       <workItem from="1705910813350" duration="760000" />
-      <workItem from="1705911591008" duration="3081000" />
+      <workItem from="1705911591008" duration="3407000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor">
+      <option name="closed" value="true" />
+      <created>1705916099035</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705916099035</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/StringReverser$main.coverage" NAME="main Coverage Results" MODIFIED="1705868787917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

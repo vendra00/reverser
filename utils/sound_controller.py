@@ -7,11 +7,12 @@ a function to play a sound file, which is used for user interaction feedback.
 """
 
 import os
-import pygame
 import threading
 
-from utils import messages
+import pygame
 
+from utils.messages import reset, red, sound_not_found, warning_path
+from utils.utils import color_picker
 
 # Initialize Pygame mixer
 pygame.mixer.init()
@@ -39,6 +40,6 @@ def play_sound(sound_path, is_warning=False):
         thread.start()
     else:
         if not is_warning:
-            print(messages.sound_not_found.format(sound_path))
+            print(color_picker(red) + sound_not_found.format(sound_path) + color_picker(reset))
             # Now call play_sound for warning with is_warning set to True
-            play_sound(messages.sound_not_found, is_warning=True)
+            play_sound(warning_path, is_warning=True)
