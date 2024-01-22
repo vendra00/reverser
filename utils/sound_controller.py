@@ -10,6 +10,9 @@ import os
 import pygame
 import threading
 
+from utils import messages
+
+
 # Initialize Pygame mixer
 pygame.mixer.init()
 
@@ -22,22 +25,20 @@ def _play_sound_thread(sound_path):
     sound.play()
 
 
-def play_sound(sound_path):
+def play_sound(sound_path, is_warning=False):
     """
     Play a sound file using Pygame in a separate thread.
 
-    This function checks if the sound file exists at the given path and plays it
-    in a separate thread. It allows the main program to continue running while
-    the sound is playing.
-
     Parameters:
     sound_path (str): The file path to the sound file to be played.
-                      This should be a valid path to a sound file supported by Pygame (e.g., .wav, .mp3).
+    is_warning (bool): Flag to indicate if this is a warning sound.
     """
     if os.path.exists(sound_path):
         # Create a thread to play the sound
         thread = threading.Thread(target=_play_sound_thread, args=(sound_path,))
         thread.start()
     else:
-        print(f"Warning: Sound file not found at {sound_path}")
-        play_sound("files/warning.wav")
+        if not is_warning:
+            print(messages.sound_not_found.format(sound_path))
+            # Now call play_sound for warning with is_warning set to True
+            play_sound(messages.sound_not_found, is_warning=True)

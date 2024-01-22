@@ -25,18 +25,18 @@ def app_runner():
     """
     while True:
         input_string = input(messages.input_str)  # Use the imported message
-        if input_string.lower() == 'exit':
+        if input_string.lower() == messages.exit_input:
             print(messages.exit_message)
             break
 
         try:
-            play_sound('files/btn_click.wav')  # Play sound
+            play_sound(messages.btn_click_path)  # Play sound
         except Exception as e:
             print(messages.sound_error.format(e))
-            play_sound("files/warning.wav")
+            play_sound(messages.warning_path, is_warning=True)
 
         reversed_string = reverse_string(input_string)
-        print("Reversed string:", color_picker("yellow") + reversed_string + color_picker("reset"))
+        print(messages.reversed_str, color_picker(messages.yellow) + reversed_string + color_picker(messages.reset))
         print()
 
 
@@ -48,6 +48,6 @@ def welcome_interface():
     It utilizes ANSI escape codes for coloring the text, which are obtained
     from the color_picker function.
     """
-    print(color_picker("blue") + "Welcome to the String Reverser!" + color_picker("reset"))
-    print(color_picker("blue") + "Enter a string and I will reverse it for you." + color_picker("reset"))
-    print(color_picker("blue") + "Type 'exit' to end the program.\n" + color_picker("reset"))
+    print(color_picker(messages.blue) + messages.welcome_message + color_picker(messages.reset))
+    print(color_picker(messages.blue) + messages.instruction_message + color_picker(messages.reset))
+    print(color_picker(messages.blue) + messages.exit_instruction + color_picker(messages.reset))

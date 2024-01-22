@@ -5,6 +5,7 @@ Utility functions for the String Reverser application.
 This module provides utility functions such as color_picker which are used
 across the application for various purposes like styling terminal output.
 """
+from utils import messages
 
 
 def color_picker(color_name):
@@ -22,8 +23,11 @@ def color_picker(color_name):
     str: ANSI escape code for the specified color.
     """
     colors = {
-        "blue": '\033[94m',
-        "reset": '\033[0m',  # Resets the color to default
-        "yellow": '\033[93m'  # Closest to orange in basic ANSI codes
+        messages.blue: messages.blue_code,
+        messages.yellow: messages.yellow_code,
+        messages.red: messages.red_code,
+        messages.green: messages.green_code,
+        messages.purple: messages.purple_code,
+        messages.reset: messages.reset_code
     }
-    return colors.get(color_name, colors["reset"])
+    return colors.get(color_name, colors[messages.reset])
