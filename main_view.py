@@ -9,8 +9,7 @@ such as displaying welcome messages and managing the application loop.
 from reverser import reverse_string
 from utils.messages import yellow, reversed_str, sound_error, btn_click_path, reset, blue, \
     welcome_message, instruction_message, exit_instruction, input_str, exit_input, exit_message, exit_path, \
-    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option, \
-    reversing_str_complete, reversing_str
+    exit_sleep_time, purple, teal, error_path, bar, green, background_path, mute_input, sound_option
 from utils.sound_controller import play_sound, toggle_background_sound, start_background_sound, stop_background_sound
 from utils.utils import color_picker, wait
 
